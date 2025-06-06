@@ -4,15 +4,22 @@ import React from 'react';
 const HandAnimationModule = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/10 flex flex-col items-center justify-center">
-      {/* Container de las manos en paralelo */}
-      <div className="flex items-center justify-center gap-8 md:gap-16 mb-16">
-        {/* Mano izquierda */}
-        <div className="animate-float">
-          <div className="transform hover:scale-110 transition-all duration-300 cursor-pointer">
+      {/* Container de las manos en paralelo con puzzle pieces */}
+      <div className="flex items-center justify-center gap-8 md:gap-16 mb-16 relative">
+        {/* Mano izquierda con puzzle piece blanco */}
+        <div className="animate-float relative">
+          <div className="transform hover:scale-110 transition-all duration-300 cursor-pointer relative">
             <img 
               src="/lovable-uploads/5bb16f11-6f62-4111-a968-2af2ddcbe7f5.png" 
               alt="Mano izquierda wireframe"
-              className="w-32 h-32 md:w-48 md:h-48 object-contain animate-pulse"
+              className="w-32 h-32 md:w-48 md:h-48 object-contain animate-pulse relative z-10"
+            />
+            {/* Puzzle piece blanco que la mano "agarra" */}
+            <img 
+              src="/lovable-uploads/999cc1a7-0f0b-4bc8-a26c-c316703ede4e.png" 
+              alt="Puzzle piece blanco"
+              className="w-16 h-16 md:w-20 md:h-20 object-contain absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse z-20"
+              style={{ animationDelay: '0.2s' }}
             />
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-muted-foreground font-medium opacity-0 hover:opacity-100 transition-opacity duration-300">
               Interactiva
@@ -20,14 +27,21 @@ const HandAnimationModule = () => {
           </div>
         </div>
 
-        {/* Mano derecha */}
-        <div className="animate-float" style={{ animationDelay: '1s' }}>
-          <div className="transform hover:scale-110 transition-all duration-300 cursor-pointer">
+        {/* Mano derecha con puzzle piece rosa */}
+        <div className="animate-float relative" style={{ animationDelay: '1s' }}>
+          <div className="transform hover:scale-110 transition-all duration-300 cursor-pointer relative">
             <img 
               src="/lovable-uploads/d266168b-258f-4dd4-a451-7d9d358a27c2.png" 
               alt="Mano derecha wireframe"
-              className="w-32 h-32 md:w-48 md:h-48 object-contain animate-pulse"
+              className="w-32 h-32 md:w-48 md:h-48 object-contain animate-pulse relative z-10"
               style={{ animationDelay: '0.5s' }}
+            />
+            {/* Puzzle piece rosa que la mano "agarra" */}
+            <img 
+              src="/lovable-uploads/96718621-cf21-4cd5-885c-0e283d71b8ad.png" 
+              alt="Puzzle piece rosa"
+              className="w-16 h-16 md:w-20 md:h-20 object-contain absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse z-20"
+              style={{ animationDelay: '0.7s' }}
             />
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-muted-foreground font-medium opacity-0 hover:opacity-100 transition-opacity duration-300">
               Futurista
